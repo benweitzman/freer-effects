@@ -4,6 +4,7 @@ module NonDet () where
 import Control.Applicative
 import Control.Monad
 import Control.Monad.Freer
+import Control.Monad.Freer.NonDet
 
 ifte :: Member NonDet r
      => Eff r a -> (a -> Eff r b) -> Eff r b -> Eff r b
